@@ -50,5 +50,23 @@ namespace Activities
 			Log.Debug("DEBUG", "Back Button Pressed!");
 			base.OnBackPressed();
 		}
+
+		protected override void OnPause()
+		{
+			Log.Debug("DEBUG", "OnPaused");
+			base.OnPause();
+		}
+
+		protected override void OnDestroy()
+		{
+			Log.Debug("DEBUG", "OnDestroy");
+			base.OnDestroy();
+		}
+
+		protected override void OnResume()
+		{
+			Log.Debug("DEBUG", "OnResume");
+			base.OnResume();
+		}
 	}
 }
