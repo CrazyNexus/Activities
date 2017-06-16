@@ -24,6 +24,11 @@ namespace Activities
 			{
 				// code to open a new activity
 				var intent = new Intent(this, typeof(ShareActivity));
+				intent.PutExtra("myString", "passed message");
+
+				// share objects between activities
+				// http://hmkcode.com/android-passing-java-object-another-activity/
+
 				StartActivity(intent);
 			};
 		}

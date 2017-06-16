@@ -29,6 +29,12 @@ namespace Activities
 
 			SetContentView(Resource.Layout.NewActivityLayout);
 
+			// wenn dieser Wert nicht übergeben wurde, kommt es zur Laufzeit zu einem Crash. Das kann mittels try catch abgefangen werden
+			var myString = Intent.GetStringExtra("myString");
+			Log.Debug("DEBUG message", myString);
+
+
+
 			Button shareButton = FindViewById<Button>(Resource.Id.shareButton);
 
 			shareButton.Click += delegate
